@@ -4,7 +4,7 @@ services:
     container_name: telegram-forwarder
     # 如果需要使用 RSS 功能，请取消以下注释
     # ports:
-    #   - 9804:8000
+    #   - "9804:8000"  # 注意：这里的端口映射字符串通常用双引号包裹
     restart: unless-stopped
     volumes:
       - ./db:/app/db
@@ -24,4 +24,3 @@ services:
         compress: "true"
     stdin_open: true
     tty: true
-
